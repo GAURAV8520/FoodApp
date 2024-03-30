@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:outfit;
+}
+
+@layer components{
+    .divcentre{
+        @apply flex items-center;
+    }
+    .active{
+        @apply pb-1 border-b-2 border-solid border-orange-700;
+    }
+}
+/* 
+.active{
+    padding-bottom: 1px;
+    border-bottom: 2px solid #49557e;
+} */
