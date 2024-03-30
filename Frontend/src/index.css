@@ -19,9 +19,34 @@
     .active{
         @apply pb-1 border-b-2 border-solid border-orange-700;
     }
+    .button{
+        @apply px-4 py-2 border-solid border-2 border-white rounded-lg text-lg hover:bg-orange-500 ;
+    }
+    .margin{
+        @apply mx-36 my-3;
+    }
 }
-/* 
-.active{
-    padding-bottom: 1px;
-    border-bottom: 2px solid #49557e;
-} */
+
+.header{
+    
+    background: url('../public/header_img.png') no-repeat ;
+    background-size: contain;
+  
+    
+}
+.header-contain{
+    animation: FadeIn 3s; 
+}
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.scrollhide::-webkit-scrollbar{
+    display: none;
+
+}
