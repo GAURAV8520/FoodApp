@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { assets } from '../../assets/assets';
+import { StoreContext } from '../../Context/Storecontext';
 
-function FoodItem({ id, name, price, description, image }) {
+function FoodItem({  Id, name, price, description, image }) {
    
-    const [itemcount,setitemcount]=useState(0);
+    
 
+    const{ cartItem,addTocart,removeFromCart}=useContext(StoreContext);
   
     return (
-    <div className='w-full max-w-xs mx-auto rounded-md overflow-hidden shadow-md'>
+    <div className='w-full max-w-xs mx-auto rounded-md overflow-hIdden shadow-md'>
       <img className='w-full h-48 object-cover' src={image} alt={name} />
     
       <div className='p-4'>
@@ -22,13 +24,13 @@ function FoodItem({ id, name, price, description, image }) {
         <div className='flex items-center justify-between mt-2 p-1'>
         <p className='text-lg font-semibold  text-orange-600'>${price}</p>
         {
-        !itemcount
-        ?<  img className='' onClick={()=>setitemcount(prev=>prev+1)} src={assets.add_icon_green}/>
+        !cartItem[Id]
+        ?<  img className='' onClick={()=>addTocart(Id)} src={assets.add_icon_green}/>
         :
         <div className='flex gap-2 items-center  bg-slate-100 rounded-full p-1'>
-            <img className='w-8' onClick={()=>setitemcount(prev=>prev-1)} src={assets.remove_icon_red} alt="" />
-            <p className='font-semibold text-lg'>{itemcount}</p>
-            <img className='w-8' onClick={()=>setitemcount(prev=>prev+1)} src={assets.add_icon_green} alt="" />
+            <img className='w-8' onClick={()=>removeFromCart(Id)} src={assets.remove_icon_red} alt="" />
+            <p className='font-semibold text-lg'>{cartItem[Id]}</p>
+            <img className='w-8' onClick={()=>addTocart(Id)} src={assets.add_icon_green} alt="" />
         </div>
     }  
         </div>

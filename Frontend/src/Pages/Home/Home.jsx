@@ -13,7 +13,7 @@ function Home() {
       
       <Header/>
       <Exploremenu category={category} setcategory={setcategory}/>
-      <FoodDisplay/>
+      <FoodDisplay Category={category}/>
 
     </div>
   )
