@@ -7,16 +7,16 @@ function Navbar() {
 
 
   return (
-    <div className='w-full h-auto'  >
+    <div className='w-full h-auto '  >
       <div className='py-5 divcentre justify-around w-full'>
         <img src={assets.logo} alt="" />
-        <ul className='divcentre gap-8 list-none text-lg cursor-pointer' >
+        <ul className='hide divcentre gap-8 list-none text-lg cursor-pointer' >
           <li onClick={()=>Setmenu('Home')} className={menu==='Home'?'active':''} >Home</li>
           <li onClick={()=>Setmenu('Menu')} className={menu==='Menu'?'active':''}>Menu</li>
           <li onClick={()=>Setmenu('Mobile-app')} className={menu==='Mobile-app'?'active':''}>Mobile-app</li>
           <li onClick={()=>Setmenu('Contact us')} className={menu==='Contact us'?'active':''}>Contact us</li>
         </ul>
-        <div className='divcentre gap-8'>
+        <div className='hide divcentre gap-8 '>
           <img src={assets.search_icon} alt="" />
           <div className='divcentre gap-8  relative'>
             <img src={assets.basket_icon} alt="" />

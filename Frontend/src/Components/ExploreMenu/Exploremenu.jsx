@@ -7,7 +7,7 @@ function Exploremenu({category,setcategory}) {
   
   return (
     <div className='margin flex flex-col gap-4 mt-10' id='ExploreMenu'>
-        <h1 className='text-5xl '>Explore our Menu</h1>
+        <h1 className=' sm:text-xl md:text-3xl lg:text-5xl'>Explore our Menu</h1>
         <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
        <div className='scrollhide flex items-center justify-around my-1 gap-20 text-center  overflow-x-scroll'>
         {menu_list.map((item,index)=>{

@@ -13,6 +13,7 @@
 }
 
 @layer components{
+    
     .divcentre{
         @apply flex items-center;
     }
@@ -54,5 +55,29 @@
     border-radius: 50%;
     border: 5px solid tomato;
     padding: 3px;
+
+}
+
+@media (max-width: 639px){
+    .hide{
+        display: none;
+    }
+
+    .margin{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .header{
+        
+        background-size: contain;
+        
+    }
+
+}
+
+@media (min-width: 768px  max-width: 1023px) {
+    .margin{
+        margin: 5rem 5rem;
+    }
 
 }
